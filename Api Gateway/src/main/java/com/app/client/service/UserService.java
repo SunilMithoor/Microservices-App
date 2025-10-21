@@ -1,7 +1,7 @@
 package com.app.client.service;
 
 import com.app.client.UserClient;
-import com.app.client.model.dto.Users;
+import com.app.client.model.dto.user.Users;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

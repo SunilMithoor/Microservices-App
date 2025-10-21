@@ -1,0 +1,184 @@
+[
+  {
+    "id": 1,
+    "customer_id": "cust_1",
+    "user_id": 1,
+    "user_data": {
+      "name": "Alice",
+      "serial_number": "PNOLT-39010101111",
+      "contact_no": "436598236923654"
+    },
+    "kyc_data": {
+      "documents": {
+        "aadhar": {
+          "front": {
+            "expires": 1607854186,
+            "url": "link_to_photo",
+            "status": "completed",
+            "verified": true
+          },
+          "back": {
+            "expires": 1607854186,
+            "url": "link_to_photo",
+            "status": "pending",
+            "verified": false
+          },
+          "result": {
+            "aadhaar_number": "123456789012",
+            "full_name": "Rajesh Kumar Sharma",
+            "father_name": "Mohan Lal Sharma",
+            "dob": "1985-04-15",
+            "gender": "Male",
+            "address": "123, Gandhi Nagar, Mumbai, Maharashtra - 400001",
+            "pincoce": 400001,
+            "photo": "base64_encoded_string_here",
+            "email_hash": "a1b2c3d4e5f6...",
+            "mobile_hash": "f6e5d4c3b2a1...",
+            "reference_id": "9012_20250415103022"
+          },
+          "status": "pending",
+          "success": false
+        },
+        "pan": {
+          "image": {
+            "expires": 1607854186,
+            "url": "link_to_photo",
+            "status": "completed",
+            "verified": true
+          },
+          "result": {
+            "name": "DIVYANSH SHARMA",
+            "first_name": "DIVYANSH",
+            "middle_name": "SOMABHAI",
+            "last_name": "SHARMA",
+            "pan_status": "VALID",
+            "dob": "2002-10-12",
+            "reference_id": "9012_20250415103022"
+          },
+          "status": "completed",
+          "success": true
+        }
+      },
+      "person_photo": {
+        "picture": {
+          "expires": 1607854186,
+          "url": "link_to_photo"
+        }
+      }
+    },
+    "status": "success",
+    "success": true
+  },
+  {
+    "id": 2,
+    "customer_id": "cust_2",
+    "user_id": 2,
+    "user_data": {
+      "name": "Bob",
+      "serial_number": "PNOLT-39010101111",
+      "contact_no": "436598236923654"
+    },
+    "kyc_data": {
+      "documents": {
+        "aadhar": {
+          "front": {
+            "expires": 1607854186,
+            "url": "link_to_photo",
+            "status": "completed",
+            "verified": true
+          },
+          "back": {
+            "expires": 1607854186,
+            "url": "link_to_photo",
+            "status": "pending",
+            "verified": false
+          },
+          "result": {
+            "aadhaar_number": "123456789012",
+            "full_name": "Rajesh Kumar Sharma",
+            "father_name": "Mohan Lal Sharma",
+            "dob": "1985-04-15",
+            "gender": "Male",
+            "address": "123, Gandhi Nagar, Mumbai, Maharashtra - 400001",
+            "pincoce": 400001,
+            "photo": "base64_encoded_string_here",
+            "email_hash": "a1b2c3d4e5f6...",
+            "mobile_hash": "f6e5d4c3b2a1...",
+            "reference_id": "9012_20250415103022"
+          },
+          "status": "pending",
+          "success": false
+        }
+      },
+      "person_photo": {
+        "picture": {
+          "expires": 1607854186,
+          "url": "link_to_photo"
+        }
+      }
+    },
+    "status": "pending",
+    "success": false
+  },
+  {
+    "id": 3,
+    "customer_id": "cust_3",
+    "user_id": 3,
+    "user_data": {
+      "name": "Bob",
+      "serial_number": "PNOLT-39010101111",
+      "contact_no": "436598236923654"
+    },
+    "kyc_data": {
+      "documents": {
+        "pan": {
+          "image": {
+            "expires": 1607854186,
+            "url": "link_to_photo",
+            "status": "completed",
+            "verified": true
+          },
+          "result": {
+            "name": "DIVYANSH SHARMA",
+            "first_name": "DIVYANSH",
+            "middle_name": "SOMABHAI",
+            "last_name": "SHARMA",
+            "pan_status": "VALID",
+            "dob": "2002-10-12",
+            "reference_id": "9012_20250415103022"
+          },
+          "status": "completed",
+          "success": true
+        }
+      },
+      "person_photo": {
+        "picture": {
+          "expires": 1607854186,
+          "url": "link_to_photo"
+        }
+      }
+    },
+    "status": "pending",
+    "success": false
+  },
+  {
+    "id": 4,
+    "customer_id": "cust_4",
+    "user_id": 4,
+    "user_data": {
+      "name": "Charlie",
+      "serial_number": "PNOLT-39010101111",
+      "contact_no": "436598236923654"
+    },
+    "kyc_data": {
+      "person_photo": {
+        "picture": {
+          "expires": 1607854186,
+          "url": "link_to_photo"
+        }
+      }
+    },
+    "status": "pending",
+    "success": false
+  }
+]

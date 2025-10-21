@@ -1,4 +1,4 @@
-package com.app.client.model.dto;
+package com.app.client.model.dto.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

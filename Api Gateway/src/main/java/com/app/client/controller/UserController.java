@@ -1,6 +1,6 @@
 package com.app.client.controller;
 
-import com.app.client.model.dto.Users;
+import com.app.client.model.dto.user.Users;
 import com.app.client.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/user-service")
+@RequestMapping("/api/user")
 public class UserController {
 
     private final UserService userService;
@@ -24,7 +24,7 @@ public class UserController {
         return userService.searchUser(id);
     }
 
-    @GetMapping("/users")
+    @GetMapping()
     public List<Users> getAllUsers() {
         return userService.getAllUsers();
     }

@@ -1,0 +1,2 @@
+If you want to run api gateway the service registry should be running
+Feign client path and client restcontroller path should be same or else it will throw 500 error
