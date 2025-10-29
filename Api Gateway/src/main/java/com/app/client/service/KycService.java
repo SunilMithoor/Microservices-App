@@ -1,7 +1,7 @@
 package com.app.client.service;
 
 import com.app.client.KycClient;
-import com.app.client.model.dto.kyc.KycResponseItem;
+import com.app.client.model.dto.kyc.payload.response.KycResponseItem;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: auth-service
+  profiles:
+    active: dev  # default, can override via ENV variable or command-line
+  redis:
+    timeout: 60000
+    client-type: lettuce
+
+app:
+  base-url: http://localhost:8088
+
+logging:
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+
+security:
+  jwt:
+    secret-key: b7131675a4cf1f0ab83c5cc441fd8016211b8885a9c227c6556b18a640ef72f5

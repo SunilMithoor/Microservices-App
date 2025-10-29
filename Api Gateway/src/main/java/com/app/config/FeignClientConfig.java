@@ -1,7 +1,8 @@
 package com.app.config;
 
+import com.app.exception.CustomErrorDecoder;
 import feign.Logger;
-import feign.RequestInterceptor;
+import feign.codec.ErrorDecoder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,8 +20,8 @@ public class FeignClientConfig {
 //        return requestTemplate -> requestTemplate.header("Authorization", "Bearer token");
 //    }
 
-//    @Bean
-//    public ErrorDecoder errorDecoder() {
-//        return new CustomErrorDecoder();
-//    }
+    @Bean
+    public ErrorDecoder errorDecoder() {
+        return new CustomErrorDecoder();
+    }
 }

@@ -3,10 +3,7 @@ package com.app.controller;
 import com.app.model.dto.Users;
 import com.app.service.UserService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -26,8 +23,13 @@ public class UserController {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Optional<Users>> getUserById(@PathVariable int id) {
         return ResponseEntity.ok(userService.getUsersById(id));
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity<String> saveuser(@RequestBody Users  users) {
+        return ResponseEntity.ok("User registered successfully!");
     }
 }

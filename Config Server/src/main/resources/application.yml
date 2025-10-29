@@ -1,0 +1,52 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: '*'
+  #        include: health, info, metrics, env, beans
+  endpoint:
+    health:
+      show-details: always
+
+
+
+
+#spring:
+#  application:
+#    # name of the application
+#    name: spring-config-server
+#    # available profiles of the application
+#  profiles:
+#    active: local,development,production
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          # git url where the configurations are stored
+#          uri: https://github.com/ijayakantha/spring-config-server
+#          # if configurations are in sub folders search the subfolder by below name
+#          search-paths: server-config/
+#server:
+#  # config server port
+#  port: 8888
+#management:
+#  security:
+#    # disable security of the config server
+#    enabled: false

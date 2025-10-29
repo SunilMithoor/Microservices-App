@@ -1,6 +1,6 @@
 package com.app.client;
 
-import com.app.client.model.dto.kyc.KycResponseItem;
+import com.app.client.model.dto.kyc.payload.response.KycResponseItem;
 import com.app.config.FeignClientConfig;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

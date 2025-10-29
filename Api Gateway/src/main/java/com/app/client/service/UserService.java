@@ -1,7 +1,7 @@
 package com.app.client.service;
 
 import com.app.client.UserClient;
-import com.app.client.model.dto.user.Users;
+import com.app.client.model.dto.user.payload.response.Users;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,6 +22,5 @@ public class UserService {
     public List<Users> getAllUsers() {
         return userClient.users();
     }
-
 
 }

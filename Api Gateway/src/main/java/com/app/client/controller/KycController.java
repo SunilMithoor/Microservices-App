@@ -1,9 +1,7 @@
 package com.app.client.controller;
 
-import com.app.client.model.dto.kyc.KycResponseItem;
-import com.app.client.model.dto.user.Users;
+import com.app.client.model.dto.kyc.payload.response.KycResponseItem;
 import com.app.client.service.KycService;
-import com.app.client.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

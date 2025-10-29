@@ -1,6 +1,6 @@
 package com.app.client.controller;
 
-import com.app.client.model.dto.user.Users;
+import com.app.client.model.dto.user.payload.response.Users;
 import com.app.client.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

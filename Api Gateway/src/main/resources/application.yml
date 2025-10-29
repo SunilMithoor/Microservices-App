@@ -1,5 +1,8 @@
 server:
   port: 8080
+  servlet:
+    session:
+      timeout: 1m  # Session timeout of 1 minutes
 
 spring:
   application:
@@ -9,6 +12,10 @@ spring:
       enabled: true
     gateway:
       routes:
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/api/auth/**
         - id: user-service
           uri: lb://user-service
           predicates:
@@ -17,6 +24,12 @@ spring:
           uri: lb://kyc-service
           predicates:
             - Path=/api/kyc/**
+  security:
+    user:
+      name: admin
+      password: admin
+      roles: ACTUATOR_ADMIN
+
 
 eureka:
   client:
@@ -27,3 +40,37 @@ eureka:
   instance:
     preferIpAddress: true
 
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: '*'
+#        include: health, info, metrics, env, beans, sessions
+  endpoint:
+    health:
+      show-details: always
+  tracing:
+    sampling:
+      probability: 1.0  # 100% sampling for all requests
+    enabled: true
+    zipkin:
+      tracing:
+        endpoint: http://localhost:9411/api/v2/spans
+
+
+logging:
+  level:
+    root: info
+    com.app: DEBUG
+    org.flywaydb: DEBUG
+    org.springdoc: DEBUG
+    org.springframework.security: DEBUG
+
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    version: OPENAPI_3_0/
+  swagger-ui:
+    path: /swagger-ui

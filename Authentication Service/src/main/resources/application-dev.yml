@@ -1,0 +1,71 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/user_db?useSSL=false&serverTimezone=UTC
+    username: root
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  hikari:
+    minimum-idle: 5
+    maximum-pool-size: 10
+    pool-name: HikariPool-1
+    auto-commit: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    url: jdbc:mysql://localhost:3306/user_db?useSSL=false&serverTimezone=UTC
+    user: root
+    password: admin
+    baseline-on-migrate: true
+  redis:
+    host: localhost
+    port: 6379
+    password: redis@spring#api
+
+logging:
+  level:
+    root: error           # general logs only
+    com.app: info       # detailed app logs
+    com.netflix.discovery.DiscoveryClient: error
+  file:
+    name: logs/app.log
+
+security:
+  user:
+    name: admin
+    password: admin
+    roles: ACTUATOR_ADMIN
+  jwt:
+    expiration-ms: 3600000
+    refresh-expiration-ms: 86400000 #1 day
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui
